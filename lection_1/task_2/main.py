@@ -1,8 +1,7 @@
-input("Hello, do you want to find the sum of two numbers? (Yes/No): ")
+#input("Hello, do you want to find the sum of two numbers? (Yes/No): ")
+num1 = float(input("Please, enter the first number: "))
+num2 = float(input("Please, enter the second number: "))
 
-x = float(input("Please, enter the first  number: "))
-y = float(input("Please, enter the second  number: "))
+sum = num1 + num2
 
-sum = x + y
-
-print(f"The sum of two numbers is: {c}")
+print(f"The sum of two numbers is: {sum}")
