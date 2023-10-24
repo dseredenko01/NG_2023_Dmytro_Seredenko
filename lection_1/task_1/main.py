@@ -1,2 +1,2 @@
-print(f"Your first name is Dmytro")
-print(f"Your last name is Seredenko")
+print("Your first name is Dmytro")
+print("Your last name is Seredenko")
