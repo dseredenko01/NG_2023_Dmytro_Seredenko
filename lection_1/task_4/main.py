@@ -1,23 +1,27 @@
-import math
 
-operator = (input("Enter an operator (+ - * / √ x^2): "))
+operator = (input("Enter an operator (+ - * / √ x^y): "))
 
-num1 = float(input("Enter the 1st number: "))
-num2 = float(input("Enter the 2nd number: "))
-
-match operator:
-    case '+':
-        print(round(num1 + num2, 4))
-    case '-':
-        print(round(num1 - num2, 4))
-    case '*':
-        print(round(num1 * num2, 4))
-    case '/':
-        print(round(num1 / num2, 4))
-    case '√':
-        print(round(math.sqrt(num1), 4))
-    case 'x^2':
-        result = pow(num1, 2)
-        print(round(result, 4))
-    case other:
-        print(f"{operator} is invalid operator")
+if operator == '+' or operator == '-' or operator == '*' or operator == '/':
+    num1 = float(input("Enter the 1st number: "))
+    num2 = float(input("Enter the 2nd number: "))
+    match operator:
+        case '+':
+            print(round(num1 + num2, 4))
+        case '-':
+            print(round(num1 - num2, 4))
+        case '*':
+            print(round(num1 * num2, 4))
+        case '/':
+            print(round(num1 / num2, 4))
+elif operator == 'x^y' or operator == '√':
+    match operator:
+        case '√':
+            num = int(input("Enter the number: "))
+            power = int(input("Enter the power from which you want to extract the root: "))
+            print(round(num ** (1./power), 4))
+        case 'x^y':
+            num = float(input("Enter the number: "))
+            power = int(input("Enter the power to which you want to raise the number: "))
+            print(round(num ** power, 4))
+else:
+    print(f"{operator} is invalid operator")
